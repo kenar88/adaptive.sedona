@@ -1,0 +1,123 @@
+.features__gifts {
+  background-color: white;
+   padding-bottom: 0;
+  padding-top: 37px;
+    &-title {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 22px;
+  }
+  &-text {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #333333;
+  }
+}
+.feature__gift {
+  position: relative;  
+  padding-left: 70px;
+  padding-right: 10px;
+  margin-bottom: 32px;
+}
+.features__house::after {
+  content: "";
+  position: absolute;
+  width: 39px;
+  height: 37px;
+  left: 20px;
+  top: -10px;
+  background-image: url("../../img/icon-house.png");
+  background-repeat: no-repeat;
+}
+.features__box::after {
+  content: "";
+  position: absolute;
+  width: 39px;
+  height: 37px;
+  left: 20px;
+  top: -10px;
+  background-image: url("../../img/icon-gift.png");
+  background-repeat: no-repeat;
+}
+.features__food:after {
+  content: "";
+  position: absolute;
+  width: 39px;
+  height: 37px;
+  left: 20px;
+  top: -10px;
+  background-image: url("../../img/icon-burger.png");
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: $tablet-widths) {
+  .features__gifts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 52px;
+  }
+  .feature__gift {
+    width: 33%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .feature__gift:nth-child(1) {
+    order: 1;
+  }
+  .feature__gift:nth-child(2) {
+    order: 3;
+  }
+  .feature__gift:nth-child(3) {
+    order: 2;
+  }
+  
+  .features__food:after {
+    width: 77px;
+    height: 68px;
+    left: 50%;
+    margin-left: -36px;
+    top: -5px;
+    background-image: url(../../img/icon-burger2.png);
+  }
+  .features__box::after {
+    width: 64px;
+    height: 75px;
+    left: 50%;
+    margin-left: -32px;
+    top: -5px;
+    background-image: url(../../img/icon-gift2.png);
+  }
+  .features__house::after {
+    width: 75px;
+    height: 72px;
+    left: 50%;
+    margin-left: -37px;
+    top: -5px;
+    background-image: url(../../img/Image-house-2.png);
+  }
+}
+
+
+@media screen and (min-width: $desktop-widths) {
+  .feature__gift {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .feature__gift:nth-child(2) {
+    
+  }
+}

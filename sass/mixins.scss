@@ -1,0 +1,32 @@
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.container() {
+  width: 94%;
+  margin: 0 auto;
+  
+  @media @tablet-widths {
+    width: 640px;
+  }
+  @media @desktop-widths {
+    width: 960px;
+  }
+}
+.container-fluid() {
+  width: auto;
+  @media @tablet-widths {
+    width: 94%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+@mixin font-style($fz, $color) {
+  font-family: ;
+  font-size: $fz;
+  line-height: $fz * 1.5;
+  color: $color;
+}

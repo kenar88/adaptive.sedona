@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--HEADER-->
+  <header class="header form-header">
+    <nav class="header__nav">
+      <ul>
+        <li><a href="#"></a>Главная</li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Форма отзыва</a></li>
+        <li><a href="#"></a>KENAR88</li>
+        <li><a href="#"></a>Controller</li>
+      </ul>
+      <div class="header__logo">
+        <img src="" alt="Sedona" width="102" height="83">
+      </div>      
+    </nav>
+    <div class="form-header__logo-2">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="">
+        <source media="(min-width: 768px)" srcset="">
+        <img src="img/logotype-mobile.png" alt="Sedona" width="282" height="214">
+      </picture>
+    </div>
+    <div class="form-header__title">
+      <b class="form-header__title-bold">Оставьте свой отзыв</b>
+       <p class="form-header__title-bold-regular">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </div>
+  </header>
+<!--FORM-->
+<!-- MAIN FORM-->
+  <main class="form">
+    <form name="main-form" class="user-form" action="" method="post">
+      <div class="user-form">
+       <b class="form__title">Представьтесь, пожалуйста:</b>
+        <p class="user-form__name"><label><b class="user-form__title">Имя</b><input type="text" placeholder="Семён"></label></p>
+        <p class="user-form__name"><label><b class="user-form__title">Фамилия</b><input type="text" placeholder="Ерохин"></label></p>
+        <p class="user-form__name"><label><b class="user-form__title">Отчество</b><input type="text" placeholder="Сычевич"></label></p>
+      </div>
+      
+      <div class="contacts-form">
+        <b class="form__title">Контактная информация</b>
+        <label  class="contacts-form__phone"><p><b>Контактный телефон</b><input type="text" placeholder="Введите телефон"><span class="form-title__alarm">Ошибка, перепроверьте номер</span></p></label>
+        
+        <label  class="contacts-form__mail"><p><b>Электронная почта:</b><input type="text" placeholder="Введите e-mail"><span class="form-title__alarm">Ошибка, перепроверьте номер</span></p></label>        
+      </div>
+      
+      <div class="impression-form">
+       <b class="impression-form__title">ВАше Общее впечатление:</b>
+        <label><input type="radio" name="impression"><span>Скорее положительное</span></label>
+        <label><input type="radio" name="impression"><span>Скорее отрицательное</span></label>
+        <label><input type="radio" name="impression"><span>Затрудняюсь ответить</span></label>
+      </div>
+    </form>
+<!--SECOND FORM-->
+    <form action="post" class="secondary-form" method="get">
+    <div class="secondary-form__interest">
+     <b class="secondary-form__title">посещенные 
+      достопримечательности:</b>
+      <label><input type="checkbox" name="point of interest" checked>Мост Дьявола</label>
+      <label><input type="checkbox" name="point of interest" checked>Гора-Колокол</label>
+      <label><input type="checkbox" name="point of interest" checked>Слайд-парк</label>
+      <label><input type="checkbox" name="point of interest">Красные скалы</label>
+    </div>
+<!--TEXTAREA-->
+    <div class="secondary-form__emotions">
+      <b class="secondary-form__title">Опишите свои эмоции:</b>
+      <textarea name="emotions" id="" cols="30" rows="10" placeholder="Опишите подробно все свои восторги "></textarea>
+      <button class="secondary-form__btn" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+      <span class="secondary-form__important  secondary-form--hidden"><sup>*</sup>-обязательные поля</span>
+    </div>  
+    </form>
+  </main>
+<!--FOOTER-->
+  <footer class="page-footer">
+    <a href="#" class="page-footer__visit">#visitSEDONA</a>
+    <div class="page-footer__social">
+      <a href="" class="cocial-link  social-link-tw">Twitter</a>
+      <a href="" class="cocial-link social-link-f">Facebook</a>
+      <a href="" class="cocial-link  social-link-YT">YouTube</a>
+    </div>
+    <div class="page-footer__copyright">
+      <b>Разработано</b>
+      <a href="#">htmlcocodemy</a>
+    </div>
+  </footer>
+</body>
+</html>

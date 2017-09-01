@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sedona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container">
+  <svg style="display: none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-burger" viewBox="0 0 40 35"><image width="40" height="35" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAjCAMAAADR57icAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEWBs9L///+Bs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAAD5kbl1AAAAEXRSTlMAADBQgEAQYK+/79+fcM+PIMANYaAAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QkBEQ0YH0ZIzwAAAWVJREFUOMuNlNkWgyAMRJElyM78/882IK6t2nnoCZ5LAslQIS6SSrOUWdfT0AkiO2OTs3QDkvZAiNqwUsyAL/QLVAE+yn1deZ+332ABIiewaWxLrQR/u4IRvp8fWJICbSkDMp3AgrwAJY4Pc78K5TXnKAR/OJ33db9hRtpBCjDiAGIHheRtG5gQT+08cGLSS/G+CMcUF03kPQ1QYhb34FSgBpiQnkCFMsByusoXSHADdMjuSQfwRe5qs9+l98nUNq1kWwdjHYYQVHqomaE6wOwVsWNnUmwsRZFrkWHTJWJLuSpDa+RwmEfOCOyqFobMP5hb6F0PByiMRyHeHkwzFtuycGYhMxNCc7i7h3ojFW2h2cJJ1u/H9Xxr5f6QnUR96/YiIwzKe2kFzaB+B00HnXnV3IyY/zmip9atjOd8yIZ6HyPk0xl349q3N6PXyfBQ6x1Yee7rK2zjf7qIPMzazrfTS8u/1AenWxya/X7C/gAAAABJRU5ErkJggg=="/></symbol><symbol id="icon-gift" viewBox="0 0 32 38"><image width="32" height="38" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAmCAMAAACS/WnbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEWBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAAAmK4+CAAAAEHRSTlMAEJ+Pz++/IIBwMGBQQN+v3LC1AwAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhCQERDDg9M1lGAAAAx0lEQVQ4y+2T2xKDMAhEUUNCzcX9/68t4FSNrT53pt0HxuhhcXEkcg0jgIkuNQRwZIzrKUmcUg+M9kyphx1mVjfkDkDwTuZBOVauMNI7QGIWAtHL4nVTRHULNCK3WdldFezEgrn6q2Y4tivDLTNkQqFhAc+noJXRss4IAUkY4RTTVjFBkaYBGSz0Scm2aRq79ohbRdIdbwoIVtp+h0HKHNJWK3L0/w6gkwOdqDTL9orpwB4TXOzD1ssRPv8P/Bhw+99oh9wo0xNhTBjj5rYx/wAAAABJRU5ErkJggg=="/></symbol><symbol id="icon-house" viewBox="0 0 39 37"><image width="39" height="37" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAlCAMAAAD2tQAMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEWBs9L///+Bs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAAD5kbl1AAAAEXRSTlMAADDfj79g74BAn3AQr1AgzzBqiJEAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QkBEQwlXjU1nwAAAR5JREFUOMvV1OsWgiAMAOBpDIZatvd/2cbGJRPldzsckuMH42YAp5gfs/461PBTig4LHBQia1DfCUODyFLFCydsAa/wzikDgzdO2KoPCV47YT4/CnxcuS+WIF+4A1Poe66yOcYGT66wLW2vnUiCv66Ohvx8OQ57hsvRtaT8lHplqov5dm0JkXVyjHUxrjlhDoojrUt7lTkWJyznkWWE4GF/26jaw2A+0+q0U+sm7q3Q5hbbC9gJXYTmKG3PBHuw3YR+pP2TkV4Ai4eBm2bc2iq9lkgWvrQP+5ecXDcpZB+F7J+1z85hKsRrlGDM7bOzPFTPY5S3uFHe4q7yWtDxHvyxK+dx77z96aEbuO59yW6nhZH6oW+yizyI7LY4CHEfdhUZB4yDujsAAAAASUVORK5CYII="/></symbol></svg>
+  <h1 class="hidden">Welcome to sedona</h1>
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="header__nav">
+      <div class="header__nav-items">
+        <a class="header__nav--active" href="#">Главная</a>
+        <a href="#">Фото и видео</a>
+        <a href="#">Форма отзыва</a>
+        <a href="#">KENAR88</a>
+        <a class="header__nav-controller" href="#">Controller</a>
+      </div>
+      <div class="header__logo">
+        <img src="img/logotyle-mobile.png" alt="Sedona" width="102" height="83">
+      </div>
+    </nav>
+    <div class="header__logo-2">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="img/DESKTOP-index.svg">
+        <source media="(min-width: 768px)" srcset="img/tablet-index.svg">
+        <img src="img/MOBILE-index.svg" alt="Welcome to Sedona" width="282" height="300">
+      </picture>
+    </div>
+    <div class="header__title">
+      <b class="header__title-bold">СЕДОНА — небольшой городок в АРИЗОНЕ, 
+       ЗАСЛУЖИвающий большего!</b>
+      <p class="header__title-regular">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+    </div>
+  </header>
+  <!-- MAIN 1 -->
+  <main class="features">
+
+    <section class="feature__item-1">
+      <div class="feature__item-container">
+        <b class="feature__item-1-description">Настоящий городок</b>
+        <span class="fearute__item-1-number">№1</span>
+        <p class="feature__item-1-text">СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+      </div>
+      <div class="feature__item-1-img">
+        <h2 class="hidden">True city photo</h2>
+      </div>
+
+    </section>
+    <div class="features__gifts">
+      <div class="feature__gift  features__house">
+        <b class="features__gifts-title">Жилье</b>
+        <p class="features__gifts-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </div>
+      <div class="feature__gift  features__box">
+        <b class="features__gifts-title">СУВЕНИРЫ</b>
+        <p class="features__gifts-text">Не только китайского, но и местного производства!</p>
+      </div>
+      <div class="feature__gift  features__food">
+        <b class="features__gifts-title">ЕДА</b>
+        <p class="features__gifts-text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+      </div>
+    </div>
+
+
+    <section class="feature__item-2">
+      <div class="feature__item-container-2">
+        <b class="feature__item-description">ТАМ ЕСТЬ Мост дьявола
+        </b>
+        <span class="fearute__item-number">№2</span>
+        <p class="feature__item-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      </div>
+      <div class="feature__item-2-img">
+        <h2 class="hidden">Devils bridge photo</h2>
+        <!--<picture>
+          <source media="(min-width: 1280px)" srcset="">
+          <source media="(min-width: 768px)" srcset="">
+          <img src="" alt="Devils Bridge" width="320" height="260">
+        </picture>-->
+      </div>
+
+    </section>
+
+    <section class="features-items-3-5">
+      <div class="feature__item-3-5  feature__item-3">
+        <b>НЕБОЛЬШАЯ ПЛОЩАДЬ</b>
+        <span>№3</span>
+        <p>ВСЕ достопримечательности находятся очень близко</p>
+      </div>
+      <div class="feature__item-3-5  feature__item-4">
+        <b>КРАСИВАЯ ДОРОГА</b>
+        <span>№4</span>
+        <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+      </div>
+      <div class="feature__item-3-5  feature__item-5">
+        <b>МАЛО ТУРИСТОВ</b>
+        <span>№5</span>
+        <p>Большинство едет в гранд каньон и толпится там</p>
+      </div>
+    </section>
+    <div class="hotel-search">
+      <b class="hotel-search__question">ЗАИНТЕРЕСОВАЛИСЬ?</b>
+      <p class="hotel-search__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+      <a href="#" class="hotel-searc__btn">НАЙТИ гостиницу</a>
+    </div>
+
+    <div class="map">
+      <img src="" alt="interactive-map" width="320" height="350">
+    </div>
+  </main>
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <a href="#" class="page-footer__visit">#visitSEDONA</a>
+    <div class="page-footer__social">
+      <a href="" class="cocial-link  social-link-tw">Twitter</a>
+      <a href="" class="cocial-link social-link-f">Facebook</a>
+      <a href="" class="cocial-link  social-link-YT">YouTube</a>
+    </div>
+    <div class="page-footer__copyright">
+      <b>Разработано</b>
+      <a href="#">htmlcocodemy</a>
+    </div>
+  </footer>
+</body>
+
+</html>
