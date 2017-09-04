@@ -24,7 +24,7 @@
 .feature__item-2-img {
   width: 100%;
   height: 260px; 
-  background-image: url(../../img/photo-bridge@1x.jpg);
+  background-image: url(../img/photo-bridge@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -43,7 +43,7 @@
   .feature__item-2-img {
     width: 67%;
     height: 275px;
-    background-image: url(../../img/photo-bridge@2x.jpg);
+    background-image: url(../img/photo-bridge@2x.jpg);
   }
   .feature__item-description {
     padding: 0 20px;
@@ -57,7 +57,7 @@
 }
 @media screen and (min-width: $desktop-widths) {
   .feature__item-2-img {
-    background-image: url(../../img/photo-bridge@3x.jpg);
+    background-image: url(../img/photo-bridge@3x.jpg);
   }
   .feature__item-description {
     padding-left: 90px;

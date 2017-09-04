@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-weight: normal;
   font-family: "PT Sans";
@@ -16,7 +17,8 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   color: #333333;
   font-style: normal;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  margin: 0; }
 
 img {
   width: 100%;
@@ -35,6 +37,42 @@ img {
 * {
   box-sizing: border-box; }
 
+/*.clearfix() {  //для LESS
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.container() {
+  width: 94%;
+  margin: 0 auto;
+  
+  @media $tablet-widths {
+    width: 640px;
+  }
+  @media $desktop-widths {
+    width: 960px;
+  }
+}
+.container-fluid() { 
+  width: auto;
+  @media @tablet-widths {
+    width: 94%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}*/
+/*SASS*/
+/*Пример брэйкпоинта  //показывает увеличение внутренних отступов и размера шрифта, когда вьюпорт становится больше 1024px
+.site-header {
+  padding: 2rem;
+  font-size: 1.8rem;
+  @include mq('tablet-wide') {
+   padding-top: 4rem;
+   font-size: 2.4rem;
+  }
+}*/
 .header__nav {
   position: relative;
   width: auto; }
@@ -113,7 +151,7 @@ img {
 .header__logo-2 {
   width: 100%;
   height: 389px;
-  background-image: url(../../img/LOGO-MAIN.jpg);
+  background-image: url(../img/LOGO-MAIN.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -152,7 +190,7 @@ img {
 
 .feature__item-1 {
   width: 100%;
-  background-image: url(../../img/MAUBE%20NOW.png);
+  background-image: url(../img/MAUBE%20NOW.png);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center; }
@@ -208,15 +246,16 @@ img {
   width: 100%;
   min-height: 230px;
   background-color: #81b3d2;
-  background-image: url(../../img/MAUBE%20NOW.png);
+  background-image: url(../img/MAUBE%20NOW.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   padding-top: 20px; }
 
 .feature__item-1-img {
   width: 100%;
   height: 260px;
-  background-image: url(../../img/photo-city@1x.jpg);
+  background-image: url(../img/photo-city@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -256,7 +295,7 @@ img {
   height: 37px;
   left: 20px;
   top: -10px;
-  background-image: url("../../img/icon-house.png");
+  background-image: url("../img/icon-house.png");
   background-repeat: no-repeat; }
 
 .features__box::after {
@@ -266,7 +305,7 @@ img {
   height: 37px;
   left: 20px;
   top: -10px;
-  background-image: url("../../img/icon-gift.png");
+  background-image: url("../img/icon-gift.png");
   background-repeat: no-repeat; }
 
 .features__food:after {
@@ -276,7 +315,7 @@ img {
   height: 37px;
   left: 20px;
   top: -10px;
-  background-image: url("../../img/icon-burger.png");
+  background-image: url("../img/icon-burger.png");
   background-repeat: no-repeat; }
 
 .feature__item-2 {
@@ -299,7 +338,7 @@ img {
 .feature__item-2-img {
   width: 100%;
   height: 260px;
-  background-image: url(../../img/photo-bridge@1x.jpg);
+  background-image: url(../img/photo-bridge@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -347,10 +386,389 @@ img {
 .feature__item-3-5:nth-child(3):after {
   display: none; }
 
+.hotel-search {
+  width: 100%;
+  background: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 48px; }
+  .hotel-search__question {
+    display: block;
+    font-size: 21px;
+    color: black;
+    font-weight: bold;
+    line-height: 26px;
+    padding-bottom: 22px; }
+  .hotel-search__text {
+    display: block;
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+    line-height: 24px;
+    margin: 0;
+    text-transform: uppercase;
+    padding-bottom: 36px;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .hotel-search__btn {
+    display: block;
+    width: 90%;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #81b3d2;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 26px; }
+    .hotel-search__btn:hover {
+      background-color: #669ec0; }
+    .hotel-search__btn:active {
+      background-color: #5496bd;
+      color: #94b9d2; }
+  .hotel-search br {
+    display: none; }
+
+.map {
+  width: 100%; }
+
+.page-footer {
+  width: 100%;
+  padding-top: 37px;
+  padding-bottom: 30px;
+  text-align: center; }
+  .page-footer__visit {
+    display: block;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 21px;
+    color: black;
+    font-weight: bold;
+    line-height: 26px; }
+  .page-footer__social {
+    width: 157px;
+    font-size: 0;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-bottom: 44px; }
+
+.cocial-link {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: #81b3d2; }
+  .cocial-link:hover {
+    background-color: #669ec0; }
+  .cocial-link:active:after {
+    background-color: #5496bd;
+    opacity: 0.3; }
+
+.social-link-tw::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  margin-left: -9px;
+  width: 18px;
+  height: 14px;
+  background-image: url(../../img/icon-twitter.png);
+  background-repeat: no-repeat; }
+
+.social-link-f::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -5px;
+  width: 9px;
+  height: 18px;
+  background-image: url(../../img/icon-facebook.png);
+  background-repeat: no-repeat; }
+
+.social-link-YT::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 14px;
+  background-image: url(../../img/icon-youtube.png);
+  background-repeat: no-repeat; }
+
+.page-footer__copyright {
+  width: 44%;
+  margin: 0 auto; }
+  .page-footer__copyright a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: black;
+    padding-right: 44px; }
+  .page-footer__copyright a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 3px;
+    top: -5px;
+    width: 27px;
+    height: 34px;
+    background-image: url(../../img/LOGO-HTML.png);
+    background-repeat: no-repeat; }
+  .page-footer__copyright a:active::after {
+    opacity: 0.3; }
+  .page-footer__copyright a:hover:after {
+    background-image: url(../../img/LOGO-HTML-BLUE.png);
+    background-repeat: no-repeat; }
+
+.header-form {
+  position: relative; }
+
+.header-form__nav {
+  z-index: 100;
+  padding-bottom: 160px; }
+
+.header-form__logo-2 {
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  background-position: center; }
+  .header-form__logo-2 svg {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    margin-left: -115px; }
+
+.header-form__title {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.form-container {
+  width: 87.5%;
+  margin: 0 auto; }
+
+.user-form {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.form__title, .impression-form__title {
+  display: block;
+  padding-left: 20px;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding-bottom: 28px; }
+
+.user-form__name {
+  display: block;
+  margin: 0;
+  padding-bottom: 20px; }
+  .user-form__name-title {
+    font-size: 14px;
+    color: #333333;
+    font-weight: 200;
+    line-height: 26px;
+    text-transform: uppercase;
+    padding-right: 19px; }
+  .user-form__name .surname-input, .user-form__name .middle-name-input {
+    padding-left: 20px;
+    outline: none;
+    padding-top: 18px;
+    border: none;
+    padding-bottom: 14px;
+    background-color: #f2f2f2;
+    width: 191px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    line-height: 26px; }
+    .user-form__name .surname-input::-webkit-input-placeholder, .user-form__name .middle-name-input::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: black; }
+    .user-form__name .surname-input:-moz-placeholder, .user-form__name .middle-name-input:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: black; }
+    .user-form__name .surname-input::-moz-placeholder, .user-form__name .middle-name-input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: black; }
+    .user-form__name .surname-input:-ms-input-placeholder, .user-form__name .middle-name-input:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: black; }
+  .user-form__name .name-input {
+    padding-left: 20px;
+    outline: none;
+    padding-top: 18px;
+    border: none;
+    padding-bottom: 14px;
+    background-color: #f2f2f2;
+    width: 227px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    line-height: 26px; }
+    .user-form__name .name-input::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: black; }
+    .user-form__name .name-input:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: black; }
+    .user-form__name .name-input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: black; }
+    .user-form__name .name-input:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: black; }
+
+.contacts-form {
+  padding-top: 21px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.contacts-form__name-title {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 200;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding-left: 20px; }
+
+.contacts-form__mail, .contacts-form__phone {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  padding-right: 58px;
+  outline: none;
+  padding-top: 18px;
+  border: none;
+  padding-bottom: 14px;
+  background-color: #f2f2f2;
+  width: 100%;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  line-height: 26px; }
+  .contacts-form__mail::-webkit-input-placeholder, .contacts-form__phone::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: black; }
+  .contacts-form__mail:-moz-placeholder, .contacts-form__phone:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: black; }
+  .contacts-form__mail::-moz-placeholder, .contacts-form__phone::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: black; }
+  .contacts-form__mail:-ms-input-placeholder, .contacts-form__phone:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: black; }
+
+.contacts-form__phone-label {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-bottom: 47px; }
+  .contacts-form__phone-label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: 0;
+    bottom: 0;
+    background-color: #e6e6e6;
+    background-image: url(../../img/phone.png);
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.contacts-form__mail-label {
+  display: block;
+  margin: 0;
+  position: relative; }
+  .contacts-form__mail-label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: 0;
+    bottom: 0;
+    background-color: #e6e6e6;
+    background-image: url(../../img/mail.png);
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.form-title__alarm {
+  position: absolute;
+  display: block;
+  margin: 0;
+  color: #ff5c5c;
+  padding-top: 8px;
+  bottom: -20px;
+  left: 20px; }
+
+.form-mail__alarm--hidden {
+  display: none; }
+
+.impression-form {
+  padding-top: 20px;
+  padding-bottom: 28px; }
+  .impression-form__radio {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding-left: 79px;
+    padding-bottom: 42px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    line-height: 26px; }
+    .impression-form__radio::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: #e6e6e6;
+      z-index: 1; }
+  .impression-form input[type="radio"] {
+    display: none; }
+
+.radio-indicator {
+  position: absolute;
+  display: none;
+  left: 17px;
+  bottom: 37px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #333333;
+  z-index: 2; }
+
+.impression-form input[type="radio"]:checked + .radio-indicator {
+  display: block; }
+
 @media screen and (min-width: 768px) {
   .header__logo-2 {
     height: 518px;
-    background-image: url(../../img/TABLET-LOGO.jpg); }
+    background-image: url(../img/TABLET-LOGO.jpg); }
   .header__logo-2 img {
     width: 460px;
     height: 430px;
@@ -410,7 +828,7 @@ img {
   .feature__item-1-img {
     width: 67%;
     height: 256px;
-    background-image: url(../../img/photo-city@2x.jpg); }
+    background-image: url(../img/photo-city@2x.jpg); }
   .feature__item-container {
     padding-top: 0;
     background-image: none;
@@ -454,21 +872,21 @@ img {
     left: 50%;
     margin-left: -36px;
     top: -5px;
-    background-image: url(../../img/icon-burger2.png); }
+    background-image: url(../img/icon-burger2.png); }
   .features__box::after {
     width: 64px;
     height: 75px;
     left: 50%;
     margin-left: -32px;
     top: -5px;
-    background-image: url(../../img/icon-gift2.png); }
+    background-image: url(../img/icon-gift2.png); }
   .features__house::after {
     width: 75px;
     height: 72px;
     left: 50%;
     margin-left: -37px;
     top: -5px;
-    background-image: url(../../img/Image-house-2.png); }
+    background-image: url(../img/Image-house-2.png); }
   .feature__item-2 {
     display: -webkit-box;
     display: flex;
@@ -483,7 +901,7 @@ img {
   .feature__item-2-img {
     width: 67%;
     height: 275px;
-    background-image: url(../../img/photo-bridge@2x.jpg); }
+    background-image: url(../img/photo-bridge@2x.jpg); }
   .feature__item-description {
     padding: 0 20px;
     padding-top: 22px;
@@ -505,7 +923,132 @@ img {
       padding-left: 20px;
       padding-right: 20px; }
   .feature__item-3-5::after {
-    display: none; } }
+    display: none; }
+  .hotel-search {
+    padding-top: 58px;
+    padding-bottom: 58px; }
+    .hotel-search br {
+      display: block; }
+    .hotel-search__btn {
+      width: 60%; }
+  .hotel-search__question {
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 35px; }
+  .hotel-search__text {
+    padding-right: 150px;
+    padding-left: 150px; }
+  .page-footer {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    padding-top: 37px;
+    padding-bottom: 37px; }
+    .page-footer__social {
+      width: 157px;
+      padding: 0;
+      margin: 0; }
+    .page-footer__copyright {
+      width: auto;
+      margin: 0;
+      padding-top: 10px;
+      padding-right: 60px; }
+    .page-footer__visit {
+      padding-top: 10px;
+      padding-left: 60px;
+      padding-bottom: 0; }
+  .page-footer__social {
+    width: 157px;
+    padding: 0;
+    margin: 0; }
+  .page-footer__copyright {
+    padding-right: 85px; }
+  .page-footer__visit {
+    padding-left: 150px; }
+  .header-form__nav {
+    background: white;
+    padding-bottom: 0; }
+  .header-form__logo-2 {
+    top: -250px; }
+    .header-form__logo-2 svg {
+      width: 400px;
+      height: 70px;
+      margin-left: -200px;
+      bottom: 90px; }
+  .header-form__logo {
+    top: 0; }
+  .header-form__title {
+    padding-top: 260px;
+    border-bottom: none; }
+    .header-form__title-bold {
+      font-size: 30px;
+      padding: 35px 130px;
+      padding-top: 0; }
+    .header-form__title-regular {
+      padding-right: 162px;
+      padding-left: 162px; }
+  .form__title, .impression-form__title {
+    font-size: 21px; }
+  .main-form {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    flex-wrap: wrap; }
+  .impression-form {
+    -webkit-box-ordinal-group: 2;
+            order: 1;
+    width: 50%; }
+    .impression-form__title {
+      padding-bottom: 45px; }
+    .impression-form__radio {
+      padding-bottom: 50px; }
+      .impression-form__radio::after {
+        bottom: 35px; }
+  .user-form {
+    -webkit-box-ordinal-group: 3;
+            order: 2;
+    width: 50%;
+    border-bottom: none; }
+    .user-form .surname-input, .user-form .user-form__name .middle-name-input, .user-form__name .user-form .middle-name-input {
+      width: 200px; }
+    .user-form .name-input {
+      width: 235px; }
+    .user-form .user-form__name {
+      padding-left: 40px; }
+  .contacts-form {
+    -webkit-box-ordinal-group: 4;
+            order: 3;
+    width: 100%;
+    border-bottom: none; }
+    .contacts-form .form__title, .contacts-form .impression-form__title {
+      position: relative;
+      display: block;
+      padding-left: 194px; }
+      .contacts-form .form__title::after, .contacts-form .impression-form__title::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 135px;
+        height: 1px;
+        left: 0;
+        top: 10px;
+        background-color: #dbdbdb; }
+      .contacts-form .form__title::before, .contacts-form .impression-form__title::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 135px;
+        height: 1px;
+        right: 0;
+        top: 10px;
+        background-color: #dbdbdb; }
+    .contacts-form .form-title__alarm {
+      bottom: 60px;
+      left: 480px; }
+  .radio-indicator {
+    bottom: 51px; } }
 
 @media screen and (min-width: 1280px) {
   .container {
@@ -522,7 +1065,7 @@ img {
       padding-right: 111px; }
   .header__logo-2 {
     height: 518px;
-    background-image: url(../../img/DESKTOP-LOGO.jpg); }
+    background-image: url(../img/DESKTOP-LOGO.jpg); }
   .header__title-bold {
     padding-left: 380px;
     padding-right: 380px; }
@@ -541,7 +1084,7 @@ img {
     padding-left: 70px;
     padding-right: 70px; }
   .feature__item-2-img {
-    background-image: url(../../img/photo-bridge@3x.jpg); }
+    background-image: url(../img/photo-bridge@3x.jpg); }
   .feature__item-description {
     padding-left: 90px;
     padding-right: 90px; }
@@ -554,4 +1097,74 @@ img {
     padding-right: 138px; }
   .feature__item-3-5 p {
     padding-left: 90px;
-    padding-right: 90px; } }
+    padding-right: 90px; }
+  .hotel-search {
+    padding-bottom: 65px; }
+  .hotel-search__btn {
+    width: 36%; }
+  .header-form__logo-2 {
+    top: -190px;
+    height: 555px; }
+    .header-form__logo-2 svg {
+      bottom: 140px; }
+  .header-form__title {
+    padding-top: 380px; }
+  .header-form__title-regular {
+    padding-right: 420px;
+    padding-left: 420px; }
+  .contacts-form .form__title, .contacts-form .impression-form__title {
+    padding-left: 339px;
+    padding-bottom: 80px; }
+    .contacts-form .form__title::after, .contacts-form .impression-form__title::after {
+      width: 280px; }
+    .contacts-form .form__title::before, .contacts-form .impression-form__title::before {
+      width: 280px; }
+  .contacts-form .form-title__alarm {
+    left: 100px;
+    bottom: 60px; }
+  .form-container {
+    width: 75%; }
+  .impression-form .form__title, .impression-form .impression-form__title {
+    padding-left: 80px; }
+  .user-form .form__title, .user-form .impression-form__title {
+    padding-left: 40px; }
+  .user-form .user-form__name {
+    padding-left: 40px; }
+  .user-form .surname-input, .user-form .user-form__name .middle-name-input, .user-form__name .user-form .middle-name-input {
+    width: 351px; }
+  .user-form .name-input {
+    width: 386px; }
+  .contacts-container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+  .contacts-form__phone-label {
+    display: block;
+    width: 400px;
+    padding-left: 80px; }
+  .contacts-form__phone {
+    width: 320px; }
+  .contacts-form__mail, .contacts-form__phone {
+    width: 300px; }
+  .contacts-form__mail-label {
+    display: block;
+    width: 480px;
+    padding-left: 140px; }
+    .contacts-form__mail-label::after {
+      bottom: 46px; }
+  .hidden-phone {
+    display: none; }
+  .contacts-form__name-title {
+    display: block;
+    position: absolute;
+    left: -20px;
+    bottom: 15px;
+    font-size: 14px; }
+  .contacts-form__name-title {
+    display: block;
+    position: absolute;
+    font-size: 14px; }
+  .contacts-form__mail-name {
+    bottom: 60px;
+    left: -36px; } }

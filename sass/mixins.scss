@@ -1,4 +1,4 @@
-.clearfix() {
+/*.clearfix() {  //для LESS
   &::after {
     content: "";
     display: table;
@@ -9,24 +9,91 @@
   width: 94%;
   margin: 0 auto;
   
-  @media @tablet-widths {
+  @media $tablet-widths {
     width: 640px;
   }
-  @media @desktop-widths {
+  @media $desktop-widths {
     width: 960px;
   }
 }
-.container-fluid() {
+.container-fluid() { 
   width: auto;
   @media @tablet-widths {
     width: 94%;
     max-width: 960px;
     margin: 0 auto;
   }
+}*/
+
+/*SASS*/
+
+@mixin font-style($size, $colour, $weight, $lh) { //миксин для шрифта
+  @if $size { font-size: $size; }
+  @if $colour { color: $colour; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
 }
-@mixin font-style($fz, $color) {
-  font-family: ;
-  font-size: $fz;
-  line-height: $fz * 1.5;
-  color: $color;
+
+@mixin reset-list { //ресет списка
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin push--auto {  //центровка блочного эллемента
+  margin: {
+   left: auto;
+   right: auto;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){  //стандартные 3 строки для псевдоэллемента
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+$breakpoints: (           //брэйкпоинты
+  "phone":        400px,
+  "phone-wide":   480px,
+  "phablet":      560px,
+  "tablet-small": 640px,
+  "tablet":       768px,
+  "tablet-wide":  1024px,
+  "desktop":      1248px,
+  "desktop-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+   $width: map_get($breakpoints, $width);
+   @if $type == max {
+    $width: $width - 1px;
+   }
+   @media only screen and (#{$type}-width: $width) {
+    @content;
+   }
+  }
+}
+/*Пример брэйкпоинта  //показывает увеличение внутренних отступов и размера шрифта, когда вьюпорт становится больше 1024px
+.site-header {
+  padding: 2rem;
+  font-size: 1.8rem;
+  @include mq('tablet-wide') {
+   padding-top: 4rem;
+   font-size: 2.4rem;
+  }
+}*/
+
+@mixin placeholder-color($color) { // изменение цвета плэйсхолдера
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+  }
 }

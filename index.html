@@ -19,7 +19,7 @@
       <div class="header__nav-items">
         <a class="header__nav--active" href="#">Главная</a>
         <a href="#">Фото и видео</a>
-        <a href="#">Форма отзыва</a>
+        <a href="form.html">Форма отзыва</a>
         <a href="#">KENAR88</a>
         <a class="header__nav-controller" href="#">Controller</a>
       </div>
@@ -107,12 +107,16 @@
     </section>
     <div class="hotel-search">
       <b class="hotel-search__question">ЗАИНТЕРЕСОВАЛИСЬ?</b>
-      <p class="hotel-search__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <a href="#" class="hotel-searc__btn">НАЙТИ гостиницу</a>
+      <p class="hotel-search__text">Укажите предполагаемые даты поездки <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+      <a href="#" class="hotel-search__btn">НАЙТИ гостиницу</a>
     </div>
 
     <div class="map">
-      <img src="" alt="interactive-map" width="320" height="350">
+      <picture>
+       <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+       <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg">
+        <img src="img/map-mobile.jpg" alt="interactive-map" >
+      </picture>  
     </div>
   </main>
   <!-- FOOTER -->
@@ -124,8 +128,7 @@
       <a href="" class="cocial-link  social-link-YT">YouTube</a>
     </div>
     <div class="page-footer__copyright">
-      <b>Разработано</b>
-      <a href="#">htmlcocodemy</a>
+      <a href="#">Разработано</a>
     </div>
   </footer>
 </body>

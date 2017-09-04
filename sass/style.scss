@@ -1,8 +1,12 @@
 @import "scaffolding.scss";
+@import "mixins.scss";
 @import "variables.scss";
 @import "blocks/page-header.scss";
 @import "blocks/adventage-1.scss";
 @import "blocks/gifts.scss";
 @import "blocks/adventages-2.scss";
 @import "blocks/adventages-3-5.scss";
-@import "blocks/map";
+@import "blocks/map.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/form-nav.scss";
+@import "blocks/main-form.scss";

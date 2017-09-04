@@ -1,0 +1,344 @@
+.form-container {
+  width: 87.5%;
+  margin: 0 auto;
+}
+.main-form {
+  
+}
+.user-form {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #e5e5e5;
+  
+}
+.form__title {
+  display: block;
+  padding-left: 20px;
+  @include font-style (18px, black, bold, 26px);
+  text-transform: uppercase;
+  padding-bottom: 28px;
+}
+.user-form__name {
+  display: block;
+  margin: 0;
+  padding-bottom: 20px;
+  &-title {
+    @include font-style (14px, #333333, 200, 26px) ;
+    
+    text-transform: uppercase;
+    padding-right: 19px;
+  }
+  & .surname-input {
+    padding-left: 20px;
+    outline: none;
+    padding-top: 18px;
+    border: none;
+    padding-bottom: 14px;
+    background-color: #f2f2f2;
+    width: 191px;
+    @include font-style (18px, black, bold, 26px);
+    @include placeholder-color (black);
+  }
+  & .name-input {
+    padding-left: 20px;
+    outline: none;
+    padding-top: 18px;
+    border: none;
+    padding-bottom: 14px;
+    background-color: #f2f2f2;
+    width: 227px;
+    @include font-style (18px, black, bold, 26px);
+    @include placeholder-color (black);
+  }
+  & .middle-name-input {
+    @extend .surname-input;
+  }
+}
+.contacts-form {
+  padding-top: 21px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.contacts-form__name-title {
+  display: block;
+  margin: 0;
+  @include font-style (14px, #333333, 200, 26px);
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+.contacts-form__mail {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  padding-right: 58px;
+  outline: none;
+  padding-top: 18px;  
+  border: none;
+  padding-bottom: 14px;
+  background-color: #f2f2f2;
+  width: 100%;
+  @include font-style (18px, black, bold, 26px);
+  @include placeholder-color (black);
+ 
+  
+}
+.contacts-form__phone-label {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-bottom: 47px;
+  &::after {
+    @include pseudo;
+    width: 58px;
+    height: 58px;
+    right: 0;
+    bottom: 0;
+    background-color: #e6e6e6;
+    background-image: url(../../img/phone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.contacts-form__mail-label {
+  display: block;
+  margin: 0;
+  position: relative;
+  &::after {
+    @include pseudo;
+    width: 58px;
+    height: 58px;
+    right: 0;
+    bottom: 0;
+    background-color: #e6e6e6;
+    background-image: url(../../img/mail.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  }
+
+.contacts-form__phone {
+   @extend .contacts-form__mail;
+  }
+.form-title__alarm {
+  position: absolute;
+  display: block;
+  margin: 0;
+  color: #ff5c5c;
+  padding-top: 8px;
+  bottom: -20px;
+  left: 20px;
+}
+.form-mail__alarm--hidden {
+  display: none;
+}
+.impression-form {
+  padding-top: 20px;
+  padding-bottom: 28px;
+ 
+  &__radio {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding-left: 79px;
+    padding-bottom: 42px;
+     @include font-style (18px, black, bold, 26px);
+    &::after {
+      @include pseudo;
+      left: 0;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: #e6e6e6;
+      z-index: 1;
+    }
+    
+  }
+  & input[type="radio"] {
+    display: none;
+  }
+  
+}
+.radio-indicator {
+  position: absolute;
+  display: none;
+  left: 17px;
+  bottom: 37px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #333333;
+  
+  z-index: 2; 
+}
+.impression-form input[type="radio"]:checked + .radio-indicator {
+  display: block;
+}
+.impression-form__title {
+  @extend .form__title;
+}
+@media screen and (min-width: $tablet-widths) {
+  .form__title {
+    font-size: 21px;
+  }
+  .main-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .impression-form {
+    order: 1;
+    width: 50%;
+    &__title {
+      padding-bottom: 45px;  
+    }
+    &__radio {
+      padding-bottom: 50px;
+      &::after {
+        bottom: 35px;
+      }
+    }
+  }
+  .user-form {
+    order: 2;
+    width: 50%;
+    
+    border-bottom: none;
+      & .surname-input {
+        width: 200px;
+        
+        }
+    & .name-input {
+      width: 235px;
+      
+    }
+    & .user-form__name {
+      padding-left: 40px;
+    }
+  }
+  .contacts-form {
+    order: 3;
+    width: 100%;
+    border-bottom: none;
+    & .form__title {
+      position: relative;
+      display: block;      
+      padding-left: 194px;
+      &::after {
+        @include pseudo;
+        width: 135px;
+        height: 1px;
+        left: 0;
+        top: 10px;
+        background-color: #dbdbdb;
+      }
+      &::before {
+        @include pseudo;
+        width: 135px;
+        height: 1px;
+        right: 0;
+        top: 10px;
+        background-color: #dbdbdb;
+      }
+    }
+    & .form-title__alarm {
+      bottom: 60px;
+      left: 480px;
+    }
+  }
+  .radio-indicator {
+    bottom: 51px;
+  }
+}
+@media screen and (min-width: $desktop-widths) {
+  .contacts-form {
+    & .form__title {
+      padding-left: 339px;
+      padding-bottom: 80px;
+      &::after {
+        width: 280px;
+      }
+      &::before {
+        width: 280px;
+      }
+      
+    }
+    & .form-title__alarm {    
+         left: 100px;
+         bottom: 60px;
+      }
+  }
+  
+  .form-container {
+    width: 75%;
+  }
+  .impression-form {
+    & .form__title {
+      padding-left: 80px;
+    }
+    
+  }
+  .user-form {
+    & .form__title {
+      padding-left: 40px;
+    }
+    & .user-form__name {
+      padding-left: 40px;
+    }
+    & .surname-input {
+        width: 351px;
+        
+        }
+    & .name-input {
+      width: 386px;
+      
+    }
+  }
+  .contacts-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts-form__phone-label {
+    display: block;
+    width: 400px;
+    padding-left: 80px;
+  }
+  .contacts-form__phone {
+    width: 320px;
+  }
+  .contacts-form__mail {
+    width: 300px;
+  }
+  .contacts-form__mail-label {
+    display: block;
+    width: 480px;
+    padding-left: 140px;
+    &::after {
+      bottom: 46px;
+    }
+    
+  }
+  .hidden-phone {
+    display: none;
+  }
+  .contacts-form__name-title {
+    display:block;
+    position: absolute;
+    left: -20px;
+    bottom: 15px;
+    font-size: 14px;
+  }
+  .contacts-form__name-title {
+    display: block;
+    position: absolute;
+    font-size: 14px;
+  }
+  .contacts-form__mail-name {
+    bottom: 60px;
+    left: -36px;
+  }
+  
+}
+  

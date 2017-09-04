@@ -1,0 +1,135 @@
+.page-footer {
+  width: 100%;
+  padding-top: 37px;
+  padding-bottom: 30px;
+  text-align: center;
+  &__visit {
+    display: block;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include font-style (21px, black, bold, 26px);
+  }
+  &__social {
+    width: 157px;
+    font-size: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-bottom: 44px;
+  }
+  
+}
+.cocial-link {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: #81b3d2;
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active:after {
+    background-color: #5496bd;
+    opacity: 0.3;
+  }
+}
+.social-link-tw::after {
+  @include pseudo;
+  top: 18px;
+  left: 50%;
+  margin-left: -9px;
+  width: 18px;
+  height: 14px;
+  background-image: url(../../img/icon-twitter.png);
+  background-repeat: no-repeat;
+}
+.social-link-f::after {
+  @include pseudo;
+  top: 16px;
+  left: 50%;
+  margin-left: -5px;
+  width: 9px;
+  height: 18px;
+  background-image: url(../../img/icon-facebook.png);
+  background-repeat: no-repeat;
+}
+.social-link-YT::after {
+  @include pseudo;
+  top: 19px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 14px;
+  background-image: url(../../img/icon-youtube.png);
+  background-repeat: no-repeat;
+}
+.page-footer__copyright {
+  width: 44%;
+  margin: 0 auto;
+  & a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: black;
+    padding-right: 44px;
+  }
+  & a::after {
+    @include pseudo;
+    right: 3px;
+    top: -5px;
+    width: 27px;
+    height: 34px;
+    background-image: url(../../img/LOGO-HTML.png);
+    background-repeat: no-repeat;
+  }
+  & a:active::after {
+    opacity: 0.3;
+  }
+  & a:hover:after {
+    background-image: url(../../img/LOGO-HTML-BLUE.png);
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: $tablet-widths) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    &__social {
+      width: 157px;
+      padding: 0;
+      margin: 0;
+    }
+    &__copyright {
+      width: auto;
+      margin: 0;
+      padding-top: 10px;
+      padding-right: 60px;
+    }
+    &__visit {
+      padding-top: 10px;
+      padding-left: 60px;
+      padding-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: $tablet-widths) {
+  .page-footer {
+    
+    &__social {
+      width: 157px;
+      padding: 0;
+      margin: 0;
+    }
+    &__copyright {
+      padding-right: 85px;
+    }
+    &__visit {
+      padding-left: 150px;
+      
+    }
+  }
+}
