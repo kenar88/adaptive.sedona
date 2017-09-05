@@ -1,0 +1,206 @@
+.secondary-form__interest {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 20px;
+  padding-bottom: 44px; 
+}
+
+.secondary-form__title {
+  display: block;
+  text-align: center;
+  @include font-style (18px, black, bold, 26px);
+  text-transform: uppercase;
+  padding-bottom: 34px;
+}
+.secondary-form__check {
+  position: relative;
+  display: block;
+  @include font-style (18px, black, bold, 26px);
+  padding-left: 70px;
+  margin-bottom: 60px;
+  & input[type="checkbox"] {
+    display: none;
+  }
+  &::after {
+    @include pseudo;
+    left: 0;
+    bottom: -15px;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    z-index: 1;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.check-indicator {
+  position: absolute;
+  display: none;
+  left: 18px;
+  bottom: 5px;
+  width: 24px;
+  height: 16px;
+  background-image: url(../../img/tick.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+.secondary-form__check input[type="checkbox"]:checked + .check-indicator {
+  display: block;
+}
+
+.secondary-form__emotions {
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 20px;
+  padding-bottom: 48px;
+  & textarea {
+    width: 100%;
+    background-color:  #f2f2f2;
+    border: none;
+    outline: none;
+    @include placeholder-color (black);
+    @include font-style (18px, black, bold, 26px);
+    letter-spacing: 0.5px;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+    resize: none;
+  }
+}
+.secondary-form__title {
+  padding-bottom: 21px;
+  
+}
+.secondary-form-btn {
+  border: none;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #81b3d2;
+  cursor: pointer;
+  @include font-style (21px, white, bold, 26px);
+  text-transform: uppercase;
+}
+.secondary-form--hidden {
+  display: none;  
+}
+.page-footer__copyright--dec {
+  font-size: 0;
+}
+@media screen and (min-width: $tablet-widths) {
+  .secondary-form__interest {
+    border-top: none;
+    
+  }
+  .secondary-form-container {
+    width: 71%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 50px;
+  }
+  .secondary-form__title {
+    position: relative;
+    padding-left: 190px;
+    padding-right: 190px;
+    font-size: 21px;
+    &::after {
+        @include pseudo;
+        width: 135px;
+        height: 1px;
+        left: 0;
+        top: 20px;
+        background-color: #dbdbdb;
+      }
+      &::before {
+        @include pseudo;
+        width: 135px;
+        height: 1px;
+        right: 0;
+        top: 20px;
+        background-color: #dbdbdb;
+      }
+  }
+  .secondary-form__check {
+    &:last-child {
+      margin-bottom: 60px;
+      
+    }
+    &:nth-child(2) {
+      margin-right: 12px;;
+    }
+  }
+  .secondary-form__emotions {
+    border-top: none;
+    position: relative;
+    padding-bottom: 114px;
+    & textarea {
+      padding-top: 20px;
+    }
+  }
+  .secondary-form__title--pseudo {
+    &::after {        
+        top: 10px;        
+      }
+      &::before {        
+        top: 10px;        
+      }
+  }
+  .secondary-form-btn {
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    width: 50%;
+    
+  }
+  .secondary-form--hidden {
+    display: block;
+  }
+  .secondary-form__important {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    @include font-style (14px, #333333, 200, 21px);
+    text-transform: uppercase;
+  }
+}
+@media screen and (min-width: $desktop-widths) {
+  .secondary-form-container {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .secondary-form__title {
+    position: relative;
+    padding-left: 340px;
+    padding-right: 340px;
+    font-size: 21px;
+    &::after {
+        
+        width: 235px;
+       
+        left: 0;
+        top: 20px;
+       
+      }
+      &::before {
+        @include pseudo;
+        width: 235px;
+        height: 1px;
+        right: 0;
+        top: 20px;
+        background-color: #dbdbdb;
+      }
+  }
+  .secondary-form__title--pseudo {
+    &::after {        
+        top: 10px;        
+      }
+      &::before {        
+        top: 10px;        
+      }
+  }
+}

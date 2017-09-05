@@ -67,17 +67,19 @@
     <div class="secondary-form__interest">
      <b class="secondary-form__title">посещенные 
       достопримечательности:</b>
-      <label><input type="checkbox" name="point of interest" checked>Мост Дьявола</label>
-      <label><input type="checkbox" name="point of interest" checked>Гора-Колокол</label>
-      <label><input type="checkbox" name="point of interest" checked>Слайд-парк</label>
-      <label><input type="checkbox" name="point of interest">Красные скалы</label>
+      <div class="secondary-form-container">
+        <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator"></span>Мост Дьявола</label>
+        <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator" checked></span>Гора-Колокол</label>
+        <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator"></span>Слайд-парк</label>
+        <label class="secondary-form__check"><input type="checkbox" name="point of interest"><span class="check-indicator"></span>Красные скалы</label>
+      </div>
     </div>
 <!--TEXTAREA-->
     <div class="secondary-form__emotions">
-      <b class="secondary-form__title">Опишите свои эмоции:</b>
-      <textarea name="emotions" id="" cols="30" rows="10" placeholder="Опишите подробно все свои восторги "></textarea>
-      <button class="secondary-form__btn" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
-      <span class="secondary-form__important  secondary-form--hidden"><sup>*</sup>-обязательные поля</span>
+      <b class="secondary-form__title secondary-form__title--pseudo">Опишите свои эмоции:</b>
+      <textarea name="emotions" id="" rows="5" placeholder="Опишите подробно все свои восторги "></textarea>
+      <button class="secondary-form-btn" type="submit" name="comment">ОТПРАВИТЬ ОТЗЫВ</button>
+      <span class="secondary-form__important  secondary-form--hidden"><sup>*</sup> -- обязательные поля</span>
     </div>  
     </form>
   </main>
@@ -90,8 +92,7 @@
       <a href="" class="cocial-link  social-link-YT">YouTube</a>
     </div>
     <div class="page-footer__copyright">
-      <b>Разработано</b>
-      <a href="#">htmlcocodemy</a>
+      <a href="#">Разработано</a>
     </div>
   </footer>
 </body>
