@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <title>Sedona form</title>
@@ -8,8 +9,9 @@
   <meta name="format-detection" content="address=no">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<!--HEADER-->
+  <!--HEADER-->
   <header class="header header-form">
     <nav class="header__nav  header-form__nav">
       <div class="header__nav-items">
@@ -33,57 +35,57 @@
       </p>
     </div>
   </header>
-<!--FORM-->
-<!-- MAIN FORM-->
+  <!--FORM-->
+  <!-- MAIN FORM-->
   <main class="form form-container">
     <form name="main-form" class="main-form" action="" method="post">
       <div class="user-form">
-       <b class="form__title">Представьтесь, пожалуйста:</b>
+        <b class="form__title">Представьтесь, пожалуйста:</b>
         <p class="user-form__name"><label><b class="user-form__name-title">Имя:</b><input class="name-input" type="text" placeholder="Семён"></label></p>
         <p class="user-form__name"><label><b class="user-form__name-title">Фамилия:</b><input class="surname-input" type="text" placeholder="Ерохин"></label></p>
         <p class="user-form__name"><label><b class="user-form__name-title">Отчество:</b><input class="middle-name-input" type="text" placeholder="Сычевич"></label></p>
       </div>
-      
-      
+
+
       <div class="contacts-form">
-       
+
         <b class="form__title">Контактная информация:</b>
         <div class="contacts-container">
           <label class="contacts-form__phone-label"><b class="contacts-form__name-title"><span class="hidden-phone">Контактный</span> телефон:</b><input class="contacts-form__phone" type="text" placeholder="Введите телефон"><span class="form-title__alarm form-phone__alarm--hidden">Ошибка, перепроверьте номер</span></label>
-        
-        <label class="contacts-form__mail-label"><b class="contacts-form__name-title contacts-form__mail-name">Электронная почта:</b><input class="contacts-form__mail" type="text" placeholder="Введите e-mail">
-        <span class="form-title__alarm  form-mail__alarm--hidden">Ошибка, перепроверьте номер</span> </label>       
-      </div>
+
+          <label class="contacts-form__mail-label"><b class="contacts-form__name-title contacts-form__mail-name">Электронная почта:</b><input class="contacts-form__mail" type="text" placeholder="Введите e-mail">
+        <span class="form-title__alarm  form-mail__alarm--hidden">Ошибка, перепроверьте номер</span> </label>
+        </div>
       </div>
       <div class="impression-form">
-       <b class="impression-form__title">ВАше Общее впечатление:</b>
+        <b class="impression-form__title">ВАше Общее впечатление:</b>
         <label class="impression-form__radio"><input type="radio" name="impression"><span class="radio-indicator"></span>Скорее положительное</label>
         <label class="impression-form__radio"><input type="radio" name="impression"><span class="radio-indicator"></span>Скорее отрицательное</label>
         <label class="impression-form__radio"><input type="radio" name="impression"><span class="radio-indicator"></span><b>Затрудняюсь ответить</b></label>
       </div>
     </form>
-<!--SECOND FORM-->
+    <!--SECOND FORM-->
     <form action="post" class="secondary-form" method="get">
-    <div class="secondary-form__interest">
-     <b class="secondary-form__title">посещенные 
+      <div class="secondary-form__interest">
+        <b class="secondary-form__title">посещенные 
       достопримечательности:</b>
-      <div class="secondary-form-container">
-        <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator"></span>Мост Дьявола</label>
-        <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator" checked></span>Гора-Колокол</label>
-        <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator"></span>Слайд-парк</label>
-        <label class="secondary-form__check"><input type="checkbox" name="point of interest"><span class="check-indicator"></span>Красные скалы</label>
+        <div class="secondary-form-container">
+          <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator"></span>Мост Дьявола</label>
+          <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator" checked></span>Гора-Колокол</label>
+          <label class="secondary-form__check"><input type="checkbox" name="point of interest" checked><span class="check-indicator"></span>Слайд-парк</label>
+          <label class="secondary-form__check"><input type="checkbox" name="point of interest"><span class="check-indicator"></span>Красные скалы</label>
+        </div>
       </div>
-    </div>
-<!--TEXTAREA-->
-    <div class="secondary-form__emotions">
-      <b class="secondary-form__title secondary-form__title--pseudo">Опишите свои эмоции:</b>
-      <textarea name="emotions" id="" rows="5" placeholder="Опишите подробно все свои восторги "></textarea>
-      <button class="secondary-form-btn" type="submit" name="comment">ОТПРАВИТЬ ОТЗЫВ</button>
-      <span class="secondary-form__important  secondary-form--hidden"><sup>*</sup> -- обязательные поля</span>
-    </div>  
+      <!--TEXTAREA-->
+      <div class="secondary-form__emotions">
+        <b class="secondary-form__title secondary-form__title--pseudo">Опишите свои эмоции:</b>
+        <textarea name="emotions" id="" rows="5" placeholder="Опишите подробно все свои восторги "></textarea>
+        <button class="secondary-form-btn" type="submit" name="comment">ОТПРАВИТЬ ОТЗЫВ</button>
+        <span class="secondary-form__important  secondary-form--hidden"><sup>*</sup> -- обязательные поля</span>
+      </div>
     </form>
   </main>
-<!--FOOTER-->
+  <!--FOOTER-->
   <footer class="page-footer">
     <a href="#" class="page-footer__visit">#visitSEDONA</a>
     <div class="page-footer__social">
@@ -96,4 +98,5 @@
     </div>
   </footer>
 </body>
+
 </html>
