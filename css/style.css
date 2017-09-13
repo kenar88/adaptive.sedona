@@ -690,7 +690,7 @@ img {
     right: 0;
     bottom: 0;
     background-color: #e6e6e6;
-    background-image: url(../../img/phone.png);
+    background-image: url(../img/phone.png);
     background-repeat: no-repeat;
     background-position: center; }
 
@@ -707,7 +707,7 @@ img {
     right: 0;
     bottom: 0;
     background-color: #e6e6e6;
-    background-image: url(../../img/mail.png);
+    background-image: url(../img/mail.png);
     background-repeat: no-repeat;
     background-position: center; }
 
@@ -812,7 +812,7 @@ img {
   bottom: 5px;
   width: 24px;
   height: 16px;
-  background-image: url(../../img/tick.png);
+  background-image: url(../img/tick.png);
   background-repeat: no-repeat;
   background-position: center;
   z-index: 2; }
